@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS vaterpolo štoperica</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="angular.js"></script>
+    <script src="angular-round-progress.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+  
+    <div ng-model="stpwtch">
+        <div ang:round:progress data-round-progress-model="stpwtch" ng-click="stpwtch.toggle()">{{stpwtch.gameClock | date:'mm:ss:sss'}}</div>
+        <h2 ng-click="stpwtch.toggle()">{{stpwtch.gameClock | date:'mm:ss:sss'}}</h2>
+        <button ng-click="stpwtch.reset()" >reset</button>
+    </div>
+    
+  </body>
+</html>
